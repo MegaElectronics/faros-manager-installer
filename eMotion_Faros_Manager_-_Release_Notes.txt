@@ -1,0 +1,384 @@
+eMotion Faros Manager, Version History
+Mega Electronics
+
+-------------------------------------------------------------------------------
+Version 2.3.0 (2017-06-29)
+-------------------------------------------------------------------------------
+- Provided with issue fixes from v2.2.0-hotfix1 (SDF/ASC conversion issue)
+
+- Support SDF/ASC conversion for Kubios HRV software (#60)
+
+- Fixed issue of incorrect user interface element of eMotion Faros 90 device (#62)
+
+- Added feature to safely eject USB connection of eMotion Faros device, which prevents disk error to happen (#63)
+
+- Updated "Firmware Update" library with new RAM BSL version and some minor fixes (#64, #67, #68)
+
+- Fixed issue of saving advanced configuration with Bluetooth Hidden Mode and Pacemaker Events Detection (#65)
+
+- Fixed issue of ADC channel count accepts value of "0" in FAROS.CFG file (#69)
+
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: Yes
+Build: NDN
+
+-------------------------------------------------------------------------------
+Version 2.2.0-hotfix1 (2017-04-27)
+-------------------------------------------------------------------------------
+Fixed errors when converting EDF file to SDF/ASC format measured in both 
+firmware 2.xx and firmware 3.x.x
+
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: Yes
+Build: NDN
+
+-------------------------------------------------------------------------------
+Version 2.2.0 (2017-04-10)
+-------------------------------------------------------------------------------
+- This new version 2.2.0 now supports Faros firmware 3.3.1 and onwards
+- Enhance the Update Firmware functionality as device information (serial ID,
+harware revision, firmware version and device name) is stored in a text file
+- Major changes in User-Interface of "Saving measurement files" functionality.
+- Faros WOMEN-UP device is now supported only from firmware version 9.7.0 and 
+onwards
+- Added Bluetooth Hidden Mode and Pacemaker Event Recording to Advanced View
+configurations
+- Added Finnish translation for Disclaimer
+- Added more software license information
+
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: Yes
+Build: NDN
+
+-------------------------------------------------------------------------------
+Version 2.1.0 (2016-12-23)
+-------------------------------------------------------------------------------
+- Fixed problem of new log file is not created in new month. Log file now also
+contains [DEBUG] level
+- Fixed problem when software returns error if current PC timezone is more 
+than 10 hours
+- Software shows message to inform users if more than one eMotion Faros device
+connected to PC
+- Add new ability to Update Firmware tool: corrupted device during previous
+update process is now able to be recovered by trying to update again
+- Support new firmware version 2.30 for RevG device
+
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: Yes
+Build: NDN
+
+-------------------------------------------------------------------------------
+Version 2.0.2 (2016-12-07)
+-------------------------------------------------------------------------------
+- Fixed the bug of showing null character in device name in FAROS.CFG file
+- Fixed the bug of unstable update process on Windows 7
+- Support new firmware version 1.40
+
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: Yes
+Build: NDN
+
+-------------------------------------------------------------------------------
+Version 2.0.1 (2016-11-25)
+-------------------------------------------------------------------------------
+-Update installer with latest eMotion Faros Series Manual
+
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: Yes
+Build: NDN
+
+-------------------------------------------------------------------------------
+Version 2.0.0.0 (2016-11-22)
+-------------------------------------------------------------------------------
+New feature:
+- eMotion Faros Manager now has two edition: Installation version (run on PC) 
+and Portable version (run in Faros SD card).
+- eMotion Faros Manager now reads full firmware version.
+- Software checks and compares device time with computer time and asks users to
+synchronize or not.
+- Update Firmware feature (only available in Installation version)
+- Users will be asked to update device firmware if it does not support
+Windows 10 Anniversary or they can keep their current firmware.
+- Open manual folder in the installed folder (Installation version) or in Faros
+SD card (Portable version).
+- Support Request feature
+
+DESIGN INPUT CHANGE? (Yes/No)
+- Yes		
+Tested: Yes
+Build: NDN
+
+-------------------------------------------------------------------------------
+Version 1.3.3.6 (2016-03-02)
+-------------------------------------------------------------------------------
+Fixes:
+- eMotion Faros 180 FW versions smaller than 03.00 were not supported.
+
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: Yes, See 1.3.3.6 test report
+Build: OH
+
+-------------------------------------------------------------------------------
+Version 1.3.3.5 (2016-03-02)
+-------------------------------------------------------------------------------
+Fixes:
+- Could not change language, because incorrect language resource files were 
+  attached in versions 1.3.3.3 and 1.3.3.4. Replaced with correct ones.
+ 
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: R&D
+Build: OH
+
+-------------------------------------------------------------------------------
+Version 1.3.3.4 (2016-03-02)
+-------------------------------------------------------------------------------
+Fixes:
+- Newer eMotion Faros 360 devices no longer have the restriction:
+  "With 3 ECG channels and less than 1000 Hz, RR is disabled".
+  
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: R&D
+Build: OH
+
+-------------------------------------------------------------------------------
+Version 1.3.3.3 (2016-03-01)
+-------------------------------------------------------------------------------
+New features:
+- Support for revisions 0F and 0G.
+- Removed ECG 100 Hz, ACC 10 Hz, ACC 50 Hz, ACC 200 Hz, ACC 400 Hz, ACC 8 g.
+- Added support for up to FW version 03.99.
+
+Fixes:
+- When moving from online mode to datalogger mode and saving without changes
+  in file format selections, the measuring mode does not change, but remains
+  online mode.
+- When saving settings after time zone change, the GUI displays wrong time and
+  "unsynchronized" warning.
+  
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: R&D
+Build: OH
+
+-------------------------------------------------------------------------------
+Version 1.3.3.2 (2015-04-15)
+-------------------------------------------------------------------------------
+New features:
+- Automatic starting of measurement is now possible for HW revisions 0C and 0E,
+  instead of just 0C.
+- Migrated the framework of the application from .NET 4.0 to .NET 4.5.
+
+Fixes:
+- An error message with title "Windows detected that this program did not run
+  correctly" is no longer shown, which showed up in some environments after
+  application shutdown.
+- Fixed a small typo in exception handling MessageBox text.
+
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: Yes
+Build: OH
+
+-------------------------------------------------------------------------------
+Version 1.3.3.1 (2014-11-04)
+-------------------------------------------------------------------------------
+New features:
+- Localization with Simplified Chinese, English and Finnish languages.
+- Added settings file, which contains current UI language and user manual code.
+- Added a settings window, which contains language settings, software and 
+  license info, and a link for user manual PDF.
+- Changed the appearance of Synchronize-button into a checkbox.
+- Synchronized device time is now showed after saving settings.
+
+Fixes:
+- Device time is now viewed correctly when clicking Refresh multiple times.
+
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: Yes
+Build: OH
+
+-------------------------------------------------------------------------------
+Version 1.2.3.1 (2014-10-06)
+-------------------------------------------------------------------------------
+New features:
+- Software now runs on .NET Framework 4.0 instead to enable
+  out-of-the-box platform support in Windows 7 and 8. Web installer
+  for .NET Framework 4.0 is now included for use in Windows XP and Vista.
+- Software is now compiled as Any CPU to enable running as native 64-bit mode.
+- If measurement mode is set to something other than 01 (Online Bluetooth),
+  03 (ASCII SDF/ASC offline) or 04 (EDF offline), it is defauted to 04.
+- More dense graphical layout.
+
+Fixes:
+- Removed battery charge monitoring once every minute to prevent problems
+  when ejecting device programmatically.
+
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: Yes
+Build: OH
+
+
+-------------------------------------------------------------------------------
+Version 1.1.3.2 (2014-08-12)
+-------------------------------------------------------------------------------
+New features:
+- Usability: separate "Save" and "Close" buttons instead of one "OK" button.
+- Added a "Refresh" button to enable device switching while software is open.
+
+Fixes:
+- ECG channel count and auto start are now read correctly from device.
+- ECG channel count selection is shown only when ECG measurement is selected.
+- Software no longer crashes if device is disconnected when the software is
+  asking for battery state.
+- Added restriction for measuring temperature with SDF/ASC file format.
+- Changed messagebox button texts from native language of Windows to English.
+- Restrictions between ECG sampling rate, ECG channel count and ACC sampling
+  are how handled correctly.
+
+DESIGN INPUT CHANGE? (Yes/No)
+- Yes		
+Tested: Yes
+Build: OH
+
+-------------------------------------------------------------------------------
+Version 1.1.3.1 (2014-07-04)
+-------------------------------------------------------------------------------
+New features:
+- About box.
+
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: Yes
+Build: OH
+
+
+-------------------------------------------------------------------------------
+Version 1.1.1.2 (2014-07-04)
+-------------------------------------------------------------------------------
+New features:
+- Automatic start of measurement on skin contact possible only for hardware
+  revision 0C.
+
+DESIGN INPUT CHANGE? (Yes/No)
+- No		
+Tested: Yes
+Build: OH
+
+  
+-------------------------------------------------------------------------------
+Version 1.1.1.1 (2014-07-03)
+-------------------------------------------------------------------------------
+New features:
+- eMotion Faros 360 supported: 1 or 3 ECG channels, temperature measurement
+- Automatic start of measurement on skin contact supported
+- Display of HW revision of eMotion Faros devices with firmware 01.09
+  and newer:
+	- 0A = 90 & 180 first revision
+	- 0B = 360 first revision
+	- 0C = 180 second revision
+- Two new restrictions according to 3 channel ECG on 360 specification
+  implemented.
+
+DESIGN INPUT CHANGE? (Yes/No)
+- Yes		
+Tested: Yes
+Build: OH
+
+  
+-------------------------------------------------------------------------------
+Version 1.0.3.10 (2014-05-20)
+-------------------------------------------------------------------------------
+New features:
+- eMotion Faros 90 with firmware version 1.09 and higher now supports ECG
+  data logging with sampling frequencies 100, 125 and 250 Hz.
+
+  
+-------------------------------------------------------------------------------
+Version 1.0.3.9 (2014-05-19)
+-------------------------------------------------------------------------------
+Fixes:
+- Fixed a bug in firmware version fetching routine.
+
+
+-------------------------------------------------------------------------------
+Version 1.0.3.8 (2014-05-19)
+-------------------------------------------------------------------------------
+New features:
+- Firmware display format changed from M.m to MM.mm, where M = major version
+  and m = minor version.
+  
+-------------------------------------------------------------------------------
+Version 1.0.3.7 (2014-05-19)
+-------------------------------------------------------------------------------
+Fixes:
+- Software no longer crashes if device is disconnected while the software is
+ open.
+
+ 
+-------------------------------------------------------------------------------
+Version 1.0.3.6 (2014-05-16)
+-------------------------------------------------------------------------------
+New features:
+- Device clock view and real-time monitoring.
+- Device time zone view and synchronization with computer time zone.
+- Battery charge view and monitoring once every minute.
+- Firmware version view.
+- Serial number view.
+- Device name view and modification.
+- Free memory expressed in megabytes and visually in percentage of total capacity.
+- Minor graphical user interface modifications.
+
+Fixes:
+- Compatibility issues with Windows 8.0 and 8.1 solved.
+- Support for other screen scales (in dots per inches, i.e. dpi) than 100 %.
+
+
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Version 1.0.3.5 (2014-03-21)
+-------------------------------------------------------------------------------
+New features:
+- Support for other than English language Windows operating systems.
+- Support for freely named mass storage drive names of eMotion Faros.
+
+-------------------------------------------------------------------------------
+Version 1.0.3.4 (2014-03-19)
+-------------------------------------------------------------------------------
+New features:
+- More compressed graphical user interface.
+- Support for eMotion Faros 90.
+
+
+-------------------------------------------------------------------------------
+Version 1.0.3.3 (2014-02-28)
+-------------------------------------------------------------------------------
+Fixes:
+- Minor data processing fixes.
+
+
+-------------------------------------------------------------------------------
+Version 1.0.3.2 (2014-02-28)
+-------------------------------------------------------------------------------
+Fixes:
+- Minor data processing fixes.
+
+
+-------------------------------------------------------------------------------
+Version 1.0.3.1 (2014-02-28)
+-------------------------------------------------------------------------------
+New features:
+- All. This is the first version. Supports eMotion Faros 180.
+
+
